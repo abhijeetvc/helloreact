@@ -1,19 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import App from './App'
-import App1 from './App1'
-
-const person={
-    name:"John",
-    city:"Pune"
-}
+// import App1 from './App1'
+import ConditionalRender from './ConditionalRender'
 
 function MyApp(){
    return(
      <div>
         <h1>This is the MyApp Component</h1>
         <Message message="Hello react!!!"/>
-        <Message1 person={person}/>
      </div>
    )
 }
@@ -27,19 +22,18 @@ function Message({message}){
   )
 }
 
-function Message1({person}){
-  return(
-      <div>
-        Name : {person.name} City: {person.city}
-      </div>
-  )
-}
+// function Message1({person}){
+//   return(
+//       <div>
+//         Name : {person.name} City: {person.city}
+//       </div>
+//   )
+// }
 
 ReactDOM.render(
   <div>
-      <App1/>
-  </div>
-   
+      <ConditionalRender/>
+  </div> 
 ,
   document.getElementById('root')
 );
